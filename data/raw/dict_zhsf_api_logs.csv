@@ -1,0 +1,15 @@
+column_name,description,data_type,example
+date,Calendar date (YYYY-MM-DD),date,2022-01-03
+claims_submitted,Total CMIS claim submissions received that day,integer,3245
+hospitals_active,Number of distinct hospitals that submitted claims,integer,47
+avg_processing_sec,Average API processing time per claim in seconds,float,1.24
+api_error_rate_pct,Percentage of API requests that returned errors,float,0.85
+p95_latency_ms,95th percentile API response latency in milliseconds,integer,412
+day_of_week,Day name of the week,categorical,Monday
+is_holiday,Binary flag: 1 = Zanzibar/Tanzania public holiday,binary: 0/1,0
+month,Calendar month number,integer 1-12,4
+quarter,Calendar quarter,integer 1-4,2
+is_month_end,Binary flag: 1 if day >= 27 (month-end billing surge),binary: 0/1,0
+is_malaria_season,Binary flag: 1 if April/May/Oct/Nov (malaria peak),binary: 0/1,1
+new_registrations,New ZHSF member registrations that day,integer,23
+total_amount_tzs,Total TZS value of all claims submitted that day,integer,198450000

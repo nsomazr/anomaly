@@ -1,0 +1,22 @@
+column_name,description,data_type,example
+claim_id,FK → zhsf_claims,string,CLM0000001
+claim_age_days,Days between service_date and submission_date (clipped ≥ 0),integer,7
+submission_month,Month of claim submission (1-12),integer,4
+submission_dayofweek,"Day of week submission was made (0=Mon, 6=Sun)",integer,1
+submission_quarter,Quarter of submission (1-4),integer,2
+is_weekend_submission,1 if submitted on Saturday or Sunday,binary: 0/1,0
+provider_claim_count,Total claims submitted by this provider in the dataset,integer,45
+hospital_claim_count,Total claims submitted by this hospital in the dataset,integer,312
+icd10_median_cost,Median claimed amount for this ICD-10 code across dataset,float,62000.0
+cost_deviation_pct,% deviation of this claim amount from ICD-10 median,float,12.5
+log_claim_amount,Natural log of (claimed_amount_tzs + 1),float,11.07
+rolling_30d_provider,Cumulative claim count for provider sorted by submission date,integer,12
+amount_vs_hospital_median,Ratio of claim amount to hospital median claim amount,float,1.05
+facility_type_enc,Label-encoded facility_type,integer,2
+plan_type_enc,Label-encoded plan_type,integer,3
+service_type_enc,Label-encoded service_type,integer,0
+claim_status_enc,Label-encoded claim_status,integer,0
+patient_gender_enc,"Label-encoded gender (0=Female, 1=Male)",integer,0
+patient_district_enc,Label-encoded patient district,integer,7
+patient_age,Patient age in years,integer,28
+is_anomaly,Ground truth anomaly label,binary: 0/1,0

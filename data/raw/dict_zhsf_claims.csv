@@ -1,0 +1,24 @@
+column_name,description,data_type,example
+claim_id,Unique claim identifier (CLM + 7 digits),string,CLM0000001
+patient_id,FK → zhsf_patients,string,PAT000001
+member_id,FK → zhsf_members,string,MEM000001
+provider_id,Clinician/provider code,string,PRV0042
+hospital_id,Facility code (HOS + 3 digits),string,HOS001
+facility_name,Name of health facility,string,Mnazi Mmoja Referral Hospital
+facility_district,District where facility is located,categorical,Urban West
+facility_type,Ownership type of facility,categorical: Public/Private/NGO,Public
+facility_level,Level of care provided,categorical: Referral/District/Health Centre/Clinic/Hospital,Referral
+service_date,Date patient received service (YYYY-MM-DD),date,2022-04-12
+submission_date,Date claim submitted to ZHSF (YYYY-MM-DD),date,2022-04-19
+service_type,Category of health service,categorical,Outpatient
+icd10_code,ICD-10 diagnosis code; ~6% missing,string/null,B54
+diagnosis_name,Plain-text diagnosis description,string,Unspecified malaria
+claimed_amount_tzs,Total amount claimed in TZS; ~4% missing,float/null,65000.0
+approved_amount_tzs,Amount approved for payment (0 if rejected; null if pending),float/null,58500.0
+claim_status,Outcome of claim adjudication,categorical: Approved/Partially Approved/Pending/Rejected,Approved
+rejection_reason,Reason for rejection or partial approval; null if approved,string/null,Duplicate claim
+plan_type,Plan type of the member at time of claim,categorical,Standard
+patient_gender,Gender of patient,categorical: Male/Female,Female
+patient_age,Age of patient at time of service,integer,28
+patient_district,District of patient residence,categorical,Urban West
+is_anomaly,Ground truth anomaly label (1=fraudulent/anomalous),binary: 0/1,0

@@ -1,0 +1,14 @@
+column_name,description,data_type,example
+payment_id,Unique payment record ID (PAY + 7 digits),string,PAY0000001
+member_id,FK → zhsf_members,string,MEM000001
+patient_id,FK → zhsf_patients,string,PAT000001
+payment_date,Date payment was recorded (YYYY-MM-DD),date,2022-03-01
+payment_month,Year-month of premium period,string YYYY-MM,2022-03
+payment_method,Payment channel used,categorical,Mobile Money (M-Pesa)
+amount_due_tzs,Monthly premium amount owed in TZS,integer,20000
+amount_paid_tzs,Actual amount received in TZS (0 if Failed),integer,20000
+payment_status,Status of this premium payment,categorical: Paid/Partial/Late/Failed,Paid
+arrears_tzs,Unpaid balance remaining in TZS,integer,0
+transaction_ref,Mobile money / bank reference number; null if Failed,string/null,TXN4812903
+plan_type,Member plan type,categorical,Standard
+late_fee_tzs,Late fee applied (2% of due amount); 0 if on time,integer,0

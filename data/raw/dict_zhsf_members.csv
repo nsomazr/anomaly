@@ -1,0 +1,12 @@
+column_name,description,data_type,example
+member_id,Unique member ID (MEM + 6 digits),string,MEM000001
+patient_id,Foreign key → zhsf_patients,string,PAT000001
+plan_type,Insurance plan tier,categorical: Basic/Standard/Enhanced/Family/Civil Servant,Standard
+enrollment_date,Date enrolled in plan (YYYY-MM-DD),date,2021-01-15
+expiry_date,Plan expiry date (YYYY-MM-DD),date,2022-01-15
+membership_status,Current status of membership,categorical: Active/Lapsed/Suspended/Pending,Active
+annual_premium_tzs,Annual premium amount in TZS,integer,240000
+annual_coverage_limit_tzs,Maximum annual benefit payout in TZS,integer,1000000
+co_payment_pct,Patient co-payment percentage at point of service,integer: 0/5/10,10
+dependants_count,Number of registered dependants on this policy,integer 0-4,2
+employer_code,Employer code for Civil Servant plans; null otherwise,string/null,EMP215

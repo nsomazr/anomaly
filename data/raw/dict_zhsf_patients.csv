@@ -1,0 +1,12 @@
+column_name,description,data_type,example
+patient_id,Unique patient identifier (PAT + 6 digits),string,PAT000001
+full_name,Patient full name (Swahili/Arabic names),string,Ahmed Mohammed
+gender,Biological sex,categorical: Male/Female,Female
+age,Age in years at registration,integer,34
+date_of_birth,Date of birth (YYYY-MM-DD),date,1990-03-15
+district,Zanzibar district of residence,categorical,Urban West
+national_id,Zanzibar National ID (ZNZ + 6 digits); ~5% missing,string/null,ZNZ123456
+phone,Mobile phone number; ~10% missing,string/null,+255712345678
+income_level,Self-reported income bracket,categorical: Low/Lower-Middle/Middle/Upper-Middle,Low
+registration_date,Date registered with ZHSF (YYYY-MM-DD),date,2020-06-01
+is_active,Current membership active flag,binary: 0/1,1
